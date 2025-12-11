@@ -336,7 +336,7 @@ def mst_to_adjacency_list(mst_edges):
 
 
 # Example usage and testing
-if __main__ == "__main__":
+if __name__ == "__main__":
     # Example weighted undirected graph
     graph = {
         'A': [('B', 4), ('C', 3), ('D', 1)],

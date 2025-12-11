@@ -35,7 +35,7 @@ def bfs(graph, start):
     Time Complexity: O(V + E)
     Space Complexity: O(V)
     """
-    from .queue import Queue
+    from data_structures.queue import Queue
     
     visited = set()
     queue = Queue()
@@ -74,7 +74,7 @@ def bfs_shortest_path(graph, start, end):
     Time Complexity: O(V + E)
     Space Complexity: O(V)
     """
-    from .queue import Queue
+    from data_structures.queue import Queue
     
     if start == end:
         return [start]
@@ -149,7 +149,7 @@ def bfs_level_order(graph, start):
     Time Complexity: O(V + E)
     Space Complexity: O(V)
     """
-    from .queue import Queue
+    from data_structures.queue import Queue
     
     visited = set()
     queue = Queue()
@@ -189,7 +189,7 @@ def bfs_distance(graph, start, target):
     Time Complexity: O(V + E)
     Space Complexity: O(V)
     """
-    from .queue import Queue
+    from data_structures.queue import Queue
     
     if start == target:
         return 0
@@ -229,7 +229,7 @@ def bfs_bidirectional(graph, start, end):
     Time Complexity: O(V + E) but typically faster in practice
     Space Complexity: O(V)
     """
-    from .queue import Queue
+    from data_structures.queue import Queue
     
     if start == end:
         return [start]

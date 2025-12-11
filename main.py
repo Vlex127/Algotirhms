@@ -13,7 +13,6 @@ from typing import List, Any
 from sorting import *
 from searching import *
 from data_structures import *
-from utils.complexity_analyzer import ComplexityAnalyzer
 from utils.test_runner import TestRunner
 
 
@@ -59,7 +58,6 @@ def main():
         # Implementation for testing specific algorithm
     elif args.analyze_complexity:
         print("Running complexity analysis...")
-        analyzer = ComplexityAnalyzer()
         # Implementation for complexity analysis
     else:
         parser.print_help()

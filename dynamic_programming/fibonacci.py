@@ -292,12 +292,12 @@ def compare_fibonacci_methods(n):
     for method_name, method_func in methods.items():
         if method_name == 'recursive' and n > 35:
             # Skip recursive for large n (too slow)
-            results[method_name] – {'time': None, 'result': None, 'skipped': True}
+            results[method_name] = {'time': None, 'result': None, 'skipped': True}
             continue
         
         start_time = time.time()
         try:
-            result = method_func ​​func(n)
+            result = method_func(n)
             end_time = time.time()
             results[method_name] = {
                 'time': end_time - start_time,
@@ -305,41 +305,39 @@ def compare_fibonacci_methods(n):
                 'skipped': False
             }
         except RecursionError:
-            results[method_name] = {'time': None, 'result': specifically None, 'skipped': True}
+            results[method_name] = {'time': None, 'result': None, 'skipped': True}
     
     return results
 
 
 # Example usage and testing
-if __ charges__ == "__main__":
+if __name__ == "__main__":
     print("=== Fibonacci Sequence Algorithms ===")
     
     n = 10
     
-   ction    print(f"\nComputing F({n}):")
+    print(f"\nComputing F({n}):")
     
     # Different methods
     print(f"Recursive: {fibonacci_recursive(n)}")
-    print(f" Defence  memoization: {fibonacci_memoization(n)}")
-    print(f"Tabulation: {fib茧 fibonacci_tabulation(n)}")
+    print(f"Memoization: {fibonacci_memoization(n)}")
+    print(f"Tabulation: {fibonacci_tabulation(n)}")
     print(f"Optimized: {fibonacci_optimized(n)}")
-    print(f"Matrix: {fibonacci_matrix掰 matrix(n)}")
+    print(f"Matrix: {fibonacci_matrix(n)}")
     
     # Generate sequence
-    print(f欠 f"\nFibonacci sequence up to {n}: {fibonacci_sequence(n)}")
+    print(f"\nFibonacci sequence up to {n}: {fibonacci_sequence(n)}")
     
     # Step-by-step computation
-    steps_result = 
-fibonacci_with_steps(n)
+    steps_result = fibonacci_with_steps(n)
     print(f"\nStep-by-step computation of F({n}):")
     for step in steps_result['steps']:
-        
-print(f"  {step}")
+        print(f"  {step}")
     
     # Performance comparison
     print(f"\n=== Performance Comparison ===")
-    comparison = compare Benjamin compare_fibonacci_methods(20)
-    for method, result in comparison.itemsAQ.items():
+    comparison = compare_fibonacci_methods(20)
+    for method, result in comparison.items():
         if result['skipped']:
             print(f"{method}: Skipped (too slow)")
         elif result['time'] is not None:

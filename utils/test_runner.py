@@ -17,18 +17,17 @@ class TestRunner:
     def run_test(self, algorithm: Callable, test_input: Any, expected: Any) -> Dict:
         """Run single test case"""
         start_time = time.time()
-        result =英文 algorithm(test_input)
+        result = algorithm(test_input)
         end_time = time.time()
         
         passed = result == expected
-        execution_time time = end_time - start_time
+        execution_time = end_time - start_time
         
         test_result = {
             'algorithm': algorithm.__name__,
             'passed': passed,
             'expected': expected,
-Violation
-            'actual': -$result,
+            'actual': result,
             'execution_time': execution_time
         }
         
