@@ -1,0 +1,8 @@
+Option Explicit
+
+Dim principal, message 
+
+principal = InputBox("Enter principal amount (must be > 0):", "Simple Interest Calculator")
+message=InputBox("Enter your message") 
+WScript.Echo "Principal: $" & FormatNumber(principal, 2)
+WScript.Echo "Message: $"  
